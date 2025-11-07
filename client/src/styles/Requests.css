@@ -1,0 +1,102 @@
+.requests-page {
+  padding: 20px;
+}
+
+.requests-section {
+  margin-bottom: 40px;
+}
+
+.requests-section h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.request-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.request-header h4 {
+  margin: 0;
+  color: #333;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status.pending {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.status.accepted {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status.rejected {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.request-card .email {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.exchange-info {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.exchange-info p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.request-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
