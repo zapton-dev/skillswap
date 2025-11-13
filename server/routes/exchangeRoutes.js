@@ -4,7 +4,7 @@ const Exchange = require('../models/Exchange');
 const User = require('../models/User');
 const auth = require('../middleware/auth');
 
-// Get all users (browse)
+
 router.get('/users', auth, async (req, res) => {
   try {
     const users = await User.find({ _id: { $ne: req.userId } })
@@ -17,7 +17,7 @@ router.get('/users', auth, async (req, res) => {
   }
 });
 
-// Send exchange request
+
 router.post('/request', auth, async (req, res) => {
   try {
     const { toUserId, fromUserSkill, toUserSkill } = req.body;
@@ -38,7 +38,7 @@ router.post('/request', auth, async (req, res) => {
   }
 });
 
-// Get my requests (sent and received)
+
 router.get('/requests', auth, async (req, res) => {
   try {
     const sentRequests = await Exchange.find({ fromUser: req.userId })
@@ -55,7 +55,7 @@ router.get('/requests', auth, async (req, res) => {
   }
 });
 
-// Update request status
+
 router.patch('/request/:id', auth, async (req, res) => {
   try {
     const { status } = req.body;
