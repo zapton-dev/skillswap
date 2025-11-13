@@ -3,7 +3,7 @@ const router = express.Router();
 const User = require('../models/User');
 const auth = require('../middleware/auth');
 
-// Get user profile
+
 router.get('/profile', auth, async (req, res) => {
   try {
     const user = await User.findById(req.userId).select('-password');
@@ -18,7 +18,7 @@ router.get('/profile', auth, async (req, res) => {
   }
 });
 
-// Add skill
+
 router.post('/skills', auth, async (req, res) => {
   try {
     const { type, title, description, category } = req.body;
@@ -51,7 +51,7 @@ router.post('/skills', auth, async (req, res) => {
   }
 });
 
-// Delete skill
+
 router.delete('/skills/:skillId', auth, async (req, res) => {
   try {
     const { skillId } = req.params;
